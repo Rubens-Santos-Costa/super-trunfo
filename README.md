@@ -3,6 +3,8 @@ Repositorio para entrega de trabalho da materia sobre Introdução à Programaç
 
 Este repositorio contém um arquivo para resolver o desafio proposto.
 
+O arquivo para resposta do desafio tem o nome de "superTrunfo.c"
+
 Regras abaixo:
 
 Criando as Cartas do Super Trunfo
