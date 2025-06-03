@@ -13,6 +13,8 @@ int main(){
     float areaCidadeKm;
     float PIB;
     int pontosTuristicos;
+    float densidadePopulacional;
+    float PIBperCapita;
 
 
     char estadoDois;
@@ -22,6 +24,8 @@ int main(){
     float areaCidadeKmDois;
     float PIBDois;
     int pontosTuristicosDois;
+    float densidadePopulacionalDois;
+    float PIBperCapitaDois;
     
     // inicio do programa
     printf("\nBem-vindo ao Super Trunfo, voce podera inserir dados referentes ate duas cartas\n\n");
@@ -53,6 +57,11 @@ int main(){
     // defini a quantidade de pontos turisticos na cidade
     printf("Quantos pontos turisticos tem na cidade: \n");
     scanf("%d", &pontosTuristicos);
+
+    densidadePopulacional = populacao / areaCidadeKm;
+
+    PIBperCapita = PIB / populacao;
+    
     
     //exibi os atributos da primeira carta
 
@@ -65,6 +74,9 @@ int main(){
     printf("Area da cidade em Km: %f\n", areaCidadeKm);
     printf("PIB: %f\n", PIB);
     printf("Quantidade de pontos turisticos: %d\n", pontosTuristicos);
+    printf("Densidade populacional: %f\n", densidadePopulacional);
+    printf("PIB per capita: %f", PIBperCapita);
+    printf(" \n*********************************** \n");
 
 
     //repetir o procedimento, porém em variaveis diferentes para definir a carta nº 2
@@ -99,7 +111,16 @@ int main(){
         printf("Quantos pontos turisticos tem na cidade: \n");
         scanf("%d", &pontosTuristicosDois);
 
-        //exibi os atributos da segunda carta carta
+        printf("PIB per capita: %f", PIBperCapitaDois);
+
+        densidadePopulacionalDois = populacaoDois / areaCidadeKmDois;
+        PIBperCapitaDois = PIBDois / populacaoDois;
+
+
+        
+
+
+        
 
         printf(" \nA sua segunda carta tem os seguintes atributos: \n");
         printf("carta 2: \n");
@@ -110,7 +131,7 @@ int main(){
         printf("Area da cidade em Km: %f\n", areaCidadeKmDois);
         printf("PIB: %f\n", PIBDois);
         printf("Quantidade de pontos turisticos: %d\n", pontosTuristicosDois);
-
+        printf("Densidade populacional: %f\n", densidadePopulacionalDois);
         printf(" \n*********************************** \n");
         printf(" \nRESULTADO FINAL: \n");
     
@@ -123,6 +144,8 @@ int main(){
         printf("Area da cidade em Km: %f\n", areaCidadeKm);
         printf("PIB: %f\n", PIB);
         printf("Quantidade de pontos turisticos: %d\n", pontosTuristicos);
+        printf("Densidade populacional: %f\n", densidadePopulacional);
+        printf("PIB per capita: %f", PIBperCapita);
 
         //carta 2
         printf("carta 2: \n");
@@ -133,5 +156,32 @@ int main(){
         printf("Area da cidade em Km: %f\n", areaCidadeKmDois);
         printf("PIB: %f\n", PIBDois);
         printf("Quantidade de pontos turisticos: %d\n", pontosTuristicosDois);
+        printf("Densidade populacional: %f\n", densidadePopulacionalDois);
+        printf("PIB per capita: %f\n", PIBperCapitaDois);
+
+        if(densidadePopulacional < densidadePopulacionalDois){
+
+            printf("\nComparacao de cartas (Atributo: Densidade Populacional):\n");
+ 
+
+            printf("Carta 1 - %s : %f\n", nomeCidade, densidadePopulacional);
+
+            printf("Carta 2 - %s : %f\n", nomeCidadeDois, densidadePopulacionalDois);
+
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade);
+
+        }else{
+            
+            printf("\nComparacao de cartas (Atributo: Densidade Populacional):\n");
+ 
+
+            printf("Carta 1 - %s : %f\n", nomeCidade, densidadePopulacional);
+
+            printf("Carta 2 - %s : %f\n", nomeCidadeDois, densidadePopulacionalDois);
+
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidadeDois);
+
+        }
+
     return 0;
 }
